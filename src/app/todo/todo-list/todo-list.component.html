@@ -1,1 +1,23 @@
-<p>todo-list works!</p>
+<div class="row">
+    <div class="col-lg-4 col-md-4">
+        <h5>High Priority</h5>
+        <app-todo-item
+            *ngFor="let task of highPriorities"
+            [todoItem]="task"
+        ></app-todo-item>
+    </div>
+    <div class="col-lg-4 col-md-4">
+        <h5>Medium Priority</h5>
+        <app-todo-item
+            *ngFor="let task of mediumPriorities"
+            [todoItem]="task"
+        ></app-todo-item>
+    </div>
+    <div class="col-lg-4 col-md-4">
+        <h5>Low Priority</h5>
+        <app-todo-item
+            *ngFor="let task of lowPriorities"
+            [todoItem]="task"
+        ></app-todo-item>
+    </div>  
+</div>

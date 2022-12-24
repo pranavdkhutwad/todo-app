@@ -1,1 +1,4 @@
-<p>todo-item works!</p>
+<div class="card mb-3" [ngClass]="getClassByPriority(todoItem?.priority)">
+    <div class="card-header">{{ todoItem?.name }}</div>
+    <div class="card-body">{{ todoItem?.desc }} {{ todoItem?.priority }}</div>
+</div>

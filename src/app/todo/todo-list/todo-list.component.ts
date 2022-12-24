@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
+import { Task } from '../todo.interface';
 @Component({
   selector: 'app-todo-list',
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.css']
 })
-export class TodoListComponent implements OnInit {
+export class TodoListComponent {
+  @Input()
+  highPriorities!: Task[];
 
-  constructor() { }
+  @Input()
+  mediumPriorities!: Task[];
 
-  ngOnInit(): void {
-  }
-
+  @Input()
+  lowPriorities!: Task[];
 }
